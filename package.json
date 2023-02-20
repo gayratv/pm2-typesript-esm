@@ -1,0 +1,29 @@
+{
+  "name": "pm2 ESM typescript problem",
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "node --loader ts-node/esm src/main.ts",
+    "start1_": "don't work",
+    "start1": "node src/main.ts",
+    "start2_": "work!",
+    "start2": "ts-node src/main.ts",
+    "lint": "npx eslint ./src",
+    "format": "npx eslint ./src --fix"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.11.10",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "eslint": "^8.29.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
+  }
+}

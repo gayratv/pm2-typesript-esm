@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "Node16",
+    "moduleResolution": "Node16",
+    "sourceMap": true,
+  },
+  "include": ["src/**/*"],
+  "exclude": [
+    "node_modules",
+    "**/*.test.ts"
+  ],
+
+  "ts-node": {
+    "esm": true,
+    "transpileOnly": true, // Use TypeScript's faster transpileModule
+    "files": true,
+    "experimentalResolver": true,// Enable experimental hooks that re-map imports and require calls to support:
+    "experimentalSpecifierResolution": "node" // Like node's --experimental-specifier-resolution, but can also be set in your tsconfig.json
+  }
+}
